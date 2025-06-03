@@ -120,19 +120,17 @@ while true; do
   echo "Selecione uma opção:"
   echo "  1) Clonar um repositório"
   echo "  2) Fazer commit das alterações"
-  echo "  3) Fazer push das alterações"
-  echo "  4) Fazer commit e push das alterações"
-  echo "  5) Fazer pull das alterações"
-  echo "  6) Sair"
-  read -rp "Digite sua escolha [1-6]: " choice
+  echo "  3) Fazer commit e push das alterações"
+  echo "  4) Fazer pull das alterações"
+  echo "  5) Sair"
+  read -rp "Digite sua escolha [1-5]: " choice
 
   case "$choice" in
     1) do_clone ;;
     2) do_commit ;;
-    3) do_push ;;
-    4) do_commit_and_push ;;
-    5) do_pull ;;
-    6) echo "Tchau!"; exit 0 ;;
+    3) do_commit_and_push ;;
+    4) do_pull ;;
+    5) echo "Tchau!"; exit 0 ;;
     *) echo "Opção inválida. Digite um número entre 1 e 5." ;;
   esac
 done
